@@ -33,7 +33,11 @@ namespace GithubRespositoryNameFetcher
                     IWebElement language;
 
                     repository = driver.FindElement(By.XPath("/html/body/div[4]/main/div[2]/div/div[2]/div[2]/div/div[2]/ul/li["+id+"]/div[1]/div[1]/h3/a"));
-                    language = driver.FindElement(By.XPath("/html/body/div[4]/main/div[2]/div/div[2]/div[2]/div/div[2]/ul/li["+id+"]/div[1]/div[3]/span/span[2]"));
+                    try {
+                        language = driver.FindElement(By.XPath("/html/body/div[4]/main/div[2]/div/div[2]/div[2]/div/div[2]/ul/li[" + id + "]/div[1]/div[3]/span/span[2]"));
+                    } catch (Exception e) {
+                        language = driver.FindElement(By.XPath("/html/body/div[4]/main/div[2]/div/div[2]/div[2]/div/div[2]/ul/li[" + id + "]/div[1]/div[4]/span/span[2]"));
+                    }
 
                     Console.WriteLine("[NAME]: {0}, [LANGUAGE]: {1} \n",repository.Text, language.Text);
                 }
