@@ -21,7 +21,7 @@ namespace GithubRespositoryNameFetcher
         static void fetchNames(string url)
         {
             driver.Url = url;
-            Thread.Sleep(10000);
+            Thread.Sleep(3000);
 
             int repositories = 30;
             for (int i = 0; i < repositories; i++)
