@@ -1,1 +1,1 @@
-# github-repository-name-fetcher
+# github-repository-language-fetcher
