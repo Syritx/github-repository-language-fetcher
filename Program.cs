@@ -89,6 +89,8 @@ namespace GithubRespositoryNameFetcher
                     }
                 }
             }
+            
+            Console.WriteLine("\n------------------------\nFOUND LANGUAGES\n");
 
             // PRINTING THE AMOUNT OF EACH LANGUAGE
             for (int lID = 0; lID < languages.Length; lID++) {
